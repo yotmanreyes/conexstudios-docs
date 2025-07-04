@@ -1,0 +1,88 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #003366;
+  --ifm-color-primary-dark: #00264d;
+  --ifm-color-primary-darker: #001a33;
+  --ifm-color-primary-darkest: #00101a;
+  --ifm-color-primary-light: #0055a5;
+  --ifm-color-primary-lighter: #3399ff;
+  --ifm-color-primary-lightest: #e6f2ff;
+  --ifm-color-accent: #ff9900;
+  --ifm-color-accent-light: #ffd580;
+  --ifm-code-font-size: 97%;
+  --ifm-font-family-base: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 51, 102, 0.08);
+  --ifm-heading-color: #003366;
+  --ifm-link-color: #0055a5;
+  --ifm-link-hover-color: #ff9900;
+  --ifm-navbar-background-color: #003366;
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-hover-color: #ffd580;
+  --ifm-button-background-color: #0055a5;
+  --ifm-button-color: #fff;
+  --ifm-button-border-radius: 6px;
+  --ifm-button-hover-background-color: #ff9900;
+  --ifm-button-hover-color: #fff;
+}
+
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #3399ff;
+  --ifm-color-primary-dark: #0055a5;
+  --ifm-color-primary-darker: #003366;
+  --ifm-color-primary-darkest: #001a33;
+  --ifm-color-primary-light: #66b3ff;
+  --ifm-color-primary-lighter: #cce6ff;
+  --ifm-color-primary-lightest: #e6f2ff;
+  --ifm-color-accent: #ffb84d;
+  --ifm-color-accent-light: #ffe0b3;
+  --ifm-heading-color: #e6f2ff;
+  --ifm-link-color: #66b3ff;
+  --ifm-link-hover-color: #ffb84d;
+  --ifm-navbar-background-color: #001a33;
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-hover-color: #ffb84d;
+  --ifm-button-background-color: #3399ff;
+  --ifm-button-color: #fff;
+  --ifm-button-border-radius: 6px;
+  --ifm-button-hover-background-color: #ffb84d;
+  --ifm-button-hover-color: #003366;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 51, 102, 0.18);
+}
+
+/* Botones personalizados */
+.button.button--secondary {
+  background: var(--ifm-button-background-color);
+  color: var(--ifm-button-color);
+  border-radius: var(--ifm-button-border-radius);
+  transition: background 0.2s, color 0.2s;
+}
+.button.button--secondary:hover {
+  background: var(--ifm-button-hover-background-color);
+  color: var(--ifm-button-hover-color);
+}
+
+/* Títulos destacados */
+.hero__title {
+  color: var(--ifm-heading-color) !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--ifm-navbar-background-color) !important;
+}
+.navbar__link {
+  color: var(--ifm-navbar-link-color) !important;
+}
+.navbar__link:hover {
+  color: var(--ifm-navbar-link-hover-color) !important;
+}
