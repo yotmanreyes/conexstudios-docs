@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Conexstudios - Plataforma Integral de Gestión Escolar',
+  tagline: 'Sistema de Gestión Escolar, Control de Estudios, Planillas Oficiales y más para instituciones educativas en Venezuela',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -20,15 +20,15 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://docs.conexstudios.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'conexstudios', // Usually your GitHub org/user name.
+  projectName: 'conexstudios-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -37,9 +37,12 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'es',
+    locales: ['es'],
   },
+
+  // SEO Configuration
+  noIndex: false, // Set to true to prevent search engines from indexing
 
   presets: [
     [
@@ -80,6 +83,23 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/conexstudiosLogo.jpg',
+      metadata: [
+        {name: 'keywords', content: 'gestión escolar, sistema escolar, control de estudios, planillas oficiales, administración escolar, docentes, representantes, Venezuela, conexstudios, ERP académico, plataforma educativa'},
+        {name: 'author', content: 'Conexstudios'},
+        {name: 'robots', content: 'index, follow'},
+        {name: 'googlebot', content: 'index, follow'},
+        {property: 'og:type', content: 'website'},
+        {property: 'og:locale', content: 'es_VE'},
+        {property: 'og:site_name', content: 'Conexstudios'},
+        {name: 'twitter:card', content: 'summary_large_image'},
+        {name: 'twitter:site', content: '@conexstudios'},
+        {name: 'twitter:creator', content: '@conexstudios'},
+        {name: 'twitter:image', content: 'img/conexstudios-og-image.jpg'},
+        {property: 'og:image', content: 'img/conexstudios-og-image.jpg'},
+        {property: 'og:image:width', content: '1200'},
+        {property: 'og:image:height', content: '630'},
+        {property: 'og:image:alt', content: 'Conexstudios - Plataforma Integral de Gestión Escolar'}
+      ],
       navbar: {
         title: 'Conexstudios',
         logo: {
@@ -143,7 +163,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Conexstudios. Todos los derechos reservados.`,
+        copyright: `Copyright ${new Date().getFullYear()} Conexstudios. Todos los derechos reservados.`,
       },
       prism: {
         theme: prismThemes.github,
