@@ -1,0 +1,37 @@
+backend:
+  name: github                        # El backend que usas (github, gitlab, bitbucket)
+  repo: yotmanreyes/conexstudios-docs # e.g., miusuario/mi-docusaurus-sitio
+  branch: main                        # La rama de tu repositorio
+  
+# Habilita Netlify Identity (si estás en Netlify)
+auth_scope: repo
+publish_mode: editorial_workflow # Opcional: permite borradores antes de publicar
+
+# Rutas para archivos multimedia
+media_folder: "static/img/uploads" # Ruta relativa en el repo para almacenar imágenes
+public_folder: "/img/uploads"      # Ruta pública para las URLs de las imágenes
+
+# Define tus colecciones de contenido (documentos, blog, páginas)
+collections:
+  # Colección de posts de Blog (estructura de Docusaurus)
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "blog"          # La carpeta de tu blog en Docusaurus
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Autor", name: "author", widget: "string", default: "Nombre del autor"}
+      - {label: "Cuerpo", name: "body", widget: "markdown"}
+      
+  # Colección de Documentos (estructura de Docusaurus)
+  - name: "docs"
+    label: "Documentación"
+    folder: "docs"           # La carpeta de tus documentos en Docusaurus
+    create: true
+    fields:
+      - {label: "ID de la barra lateral", name: "id", widget: "string", hint: "Debe ser único. Usado para el slug de la URL"}
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Sidebar Position", name: "sidebar_position", widget: "number", default: 1}
+      - {label: "Cuerpo", name: "body", widget: "markdown"}
