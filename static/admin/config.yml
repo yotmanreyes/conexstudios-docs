@@ -17,7 +17,6 @@ collections:
       - {label: "Fecha", name: "date", widget: "datetime"}
       - {label: "Autor", name: "author", widget: "string", default: "Nombre del autor"}
       - {label: "Cuerpo", name: "body", widget: "markdown"}
-      
   - name: "docs"
     label: "Documentación"
     folder: "docs"
